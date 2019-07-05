@@ -16,9 +16,12 @@ public class Hello {
 		// sysout -> Ctrl + spacebar
 		
 		System.out.println("안녕하세요, 자바!");
+	    System.out.println("안녕하세요, 자바!");
 		
 		// 소스 편집 후 항상 저장하는 습관
 		// Ctrl + S
+	    
+	    
 		
 
 	}
