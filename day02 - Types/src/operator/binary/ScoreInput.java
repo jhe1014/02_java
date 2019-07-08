@@ -45,5 +45,7 @@ public class ScoreInput {
 		} else {
 			System.out.printf("%d 은(는) 범위를 벗어난 점수입니다.%n", score);
 		}
+		
+		 
 	}
 }
