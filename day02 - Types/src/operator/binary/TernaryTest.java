@@ -47,6 +47,7 @@ public class TernaryTest {
 		
 		absZ = (z >= 0) ? z : -z;
 		System.out.printf("z=%d일 때, z의 절댓값은 %d%n", z, absZ);
+		
 	}
 
 }
