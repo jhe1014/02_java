@@ -38,14 +38,13 @@ public class ForTest {
 			System.out.printf("%d ", num);
 		}
 		
-		System.out.println("\n");
+		System.out.println("\n");  
 		
 		// 2.
 		
 		for(int num = 1; num <= 10; num++) {
 			System.out.printf("%d x %d = %d\n", num, num, num * num);
 		}
-
 	}
 
 }
