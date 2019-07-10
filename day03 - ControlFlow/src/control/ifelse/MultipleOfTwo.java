@@ -41,23 +41,28 @@ public class MultipleOfTwo {
 		
 		// 2. 초기화
 		scan  = new Scanner(System.in);
-		System.out.println("정수를 입력하세요. : ");
+		System.out.println("양의 정수를 입력하세요. : ");
 
 		// 스캐너 사용하여 input에 정수 입력
 		input = scan.nextInt();
 		// 나머지 계산
 		mod = input % 2;
 		
-		// 3. 사용 : if ~ else 로직으로 2의 배수인지 판별
-		if (mod == 0) {
-			result = "2의 배수입니다."; 
+		// 입력값이 0인 경우 : 0은 배수 판별을 할 수 없습니다.
+		if (input == 0) {
+			System.out.println("0은 배수 판별을 할 수 없습니다.");
 		} else {
-			result = "2의 배수가 아닙니다. 나머지가 " + mod + "입니다.";
+			// 3. 사용 : if ~ else 로직으로 2의 배수인지 판별
+			if (mod == 0) {
+				result = "2의 배수입니다."; 
+			} else {
+				result = "2의 배수가 아닙니다. 나머지가 " + mod + "입니다.";
+			}
+			
+			//출력
+			System.out.printf("입력된 정수 : %d%n", input);
+			System.out.printf("입력값 %d은(는) %s", input, result);
 		}
-		
-		//출력
-		System.out.printf("입력된 정수 : %d%n", input);
-		System.out.printf("입력값 %d은(는) %s", input, result);
 
 	}
 
