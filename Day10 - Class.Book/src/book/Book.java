@@ -105,10 +105,11 @@ public class Book {
 		 System.out.println("[" + sequence + "] " + isbn);
 		 System.out.println("제목 : " + title);
 		 System.out.println("저자 : " + author);
-		 System.out.println("출판사 : + " + company);
+		 System.out.println("출판사 : " + company);
 		 System.out.println("페이지 수 : " + totalPage);
 		 System.out.println("가격 : " + price);
 		 System.out.println("재고수량 : " + quantity);
+		 System.out.println("====================================");
 	 }
 	 
 	 public void buy(int amount) {
