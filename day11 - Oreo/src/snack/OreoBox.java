@@ -35,7 +35,7 @@ public class OreoBox {
 		// 현재 oreoBox보다 1 더 큰 배열을 만든다.
 		Oreo[] newOreos = new Oreo[oreos.length + 1];
 		
-		for(int idx = 0; idx < newOreos.length; idx++) {
+		for(int idx = 0; idx < oreos.length; idx++) {
 			newOreos[idx] = oreos[idx];
 		}
 		
@@ -80,14 +80,34 @@ public class OreoBox {
 	}
 	
 	public void set(Oreo oreo) {
+		int index = -1;
+		for(int idx = 0; idx < oreos.length; idx++) {
+			if(oreos[idx].getSeq() == oreo.getSeq()) {
+				// 같은 오레오 찾았다.
+				index = idx;
+				break;
+			}
+		}
 		
+		if(index > -1) {
+			oreos[index] = oreo;
+		}
 	}
 	
 	public Oreo get(Oreo oreo) {
-		return null;
+		Oreo findOreo = null;
+		for(int idx = 0; idx < oreos.length; idx++) {
+			if(oreos[idx].getSeq() == oreo.getSeq()) {
+				// 같은 오레오 찾았다.
+				findOreo = oreos[idx];
+				break;
+			}
+		}
+		
+		return findOreo;
 	}
 	
 	public Oreo[] getAllOreos() {
-		return null;
+		return this.oreos;
 	}
 }

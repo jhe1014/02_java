@@ -41,24 +41,35 @@ public class OreoTest {
 		System.out.println("====================================================================");
 		
 		// 초코쿠키를 바닐라로 변경 : set
-		
+		Oreo vanilla = new Oreo(1, "바닐라");
+		box.set(vanilla);
 		
 		// 변경된 초코쿠키 (1번 쿠키) : get
+		Oreo seqOreo = new Oreo(1);
+		Oreo findOreo = box.get(seqOreo);
+		findOreo.print();
+		
+		System.out.println("====================================================================");
 		
 		// 전체 크림 변경
 		for (Oreo oreo : box.getAllOreos()) {
 			oreo.changeCream("바닐라");
 		}
 		
-		System.out.println("==================================");
-		
 		// 바닐라 크림 변경 후 출력
-		for(Oreo oreo : oreos) {
+		for(Oreo oreo : box.getAllOreos()) {
 			oreo.print();
 		}
 		
 		// 3번 쿠키 삭제 : remove
+		Oreo rmOreo = new Oreo(3);
+		box.remove(rmOreo);
+		
+		System.out.println("====================================================================");
 		
 		// 전체 목록 출력
+		for(Oreo oreo : box.getAllOreos()) {
+			oreo.print();
+		}
 	}
 }
