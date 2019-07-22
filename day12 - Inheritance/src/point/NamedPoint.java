@@ -36,7 +36,7 @@ public class NamedPoint extends Point {
 	
 	@Override
 	public String toString() {
-		return name + String.format("[%d, %d]", getX(), getY());
+		return name + String.format("(%d, %d)", getX(), getY());
 	}
 	
 }

@@ -24,14 +24,14 @@ public class PointTest {
 		
 		// (1) 점 p 를 출력
 		System.out.println(p);
-		System.out.println(points[0]);
+		System.out.println(points[0]); 
 		
 		// (2) 점 q 를 출력
 		System.out.println(q);
 		System.out.println(points[1]);
 		
 		// (3) 점 o를 출력
-		System.out.println(o);
+		System.out.println(o); 
 		
 		// (4) 두 점 사이의 거리를 계산
 		System.out.printf("두 점 사이의 거리:%5.2f%n", p.distanceFrom(q));
