@@ -37,7 +37,7 @@ public class PointTest {
 		System.out.printf("두 점 사이의 거리:%5.2f%n", p.distanceFrom(q));
 		
 		// (5) 이름이 붙은 원점과 점 q의 거리 계산
-		System.out.printf("원점과 점 q의 거리 : %5.2f%n", o.distanceFrom(q));
+		System.out.printf("원점과 점 q의 거리 : %5.2f%n", o.distanceFrom (q));
 	}
 
 }
