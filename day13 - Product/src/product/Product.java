@@ -126,7 +126,11 @@ public class Product {
 	 * @param amount
 	 */
 	public void sell(int amount) {
-		quantity -= amount;
+		if(quantity - amount > 0) {
+			quantity -= amount;
+		} else {
+			System.out.println("재고수량이 " + -(quantity - amount) +"개 부족합니다.");
+		}
 	}
 	
 	/**
