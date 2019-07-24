@@ -22,7 +22,6 @@ package product;
  * 
  * sell(int amount) : void ==> 매장에서 판매(출고)되어 재고수량이 amount만큼 줄어들도록 반영
  * 							   재고수량이 0보다 작아질 수 없도록 제한
- * 							   판매하려는 수량(amount)가 재고보다 클 수 없도록 처리 
  * 
  * buy(int amount) : void ==> 매장에 입고되어 재고수량(quantity)이 amount만큼 늘어나도록 반영  
  * 
@@ -141,5 +140,39 @@ public class Product {
 	 */
 	public void buy(int amount) {
 		quantity += amount;
+	}
+	
+	// 수정자 메소드 선언
+	public void setPcode(String pcode) {
+		this.pcode = pcode;
+	}
+	
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	// 접근자 메소드
+	public String getPcode() {
+		return pcode;
+	}
+	
+	public String getPname() {
+		return pname;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	
+	public int getQuantity() {
+		return quantity;
 	}
 }
