@@ -1,4 +1,4 @@
-package product;
+package api.object.product;
 
 /**
  * 전자제품을 판매하는 매장에서 관리하는 대상인 "제품"을 정의하는 클래스
@@ -108,6 +108,72 @@ public class Product {
 		return String.format("제품번호 : %s, 제품명 : %s, 가격 : %d, 재고수량 : %d", pcode, pname, price, quantity);
 	}
 	
+	// equals() : 객체 내용비교 메소드 작성
+	// ==> pcode가 같으면 동일 객체로 판단
+//	@Override
+//	public boolean equals(Object object) {
+//		// 1. 동일비교 연산 결과 저장할 변수 선언
+//		// 2. 기본 false로 초기화
+//		boolean isEqual = false;
+//		
+//		// 3. 사용 : 동일한 객체인지 판단
+//		// (1) 매개변수로 넘겨진 object가 Product
+//		if(object instanceof Product) {
+//			// (2) 비교대상인 this 객체와 매개변수 object의 pcode 필드 값을 비교
+//			Product product = (Product)object;
+//			
+//			if(this.pcode.equals(product.pcode)) {
+//				isEqual = true;
+//			}
+//		}
+//		
+//		return isEqual;
+//	}
+//	
+//	public int hashCode() {
+//		/* --------------------------------------------------------------------------------
+//		 * hash 알고리즘 : 입력이 동일하면 출력도 동일함을 보장하는 수학 알고리즘
+//		 * ==> 출력이 다르면 입력이 다르다는 결론을 보장한다.
+//		 * --------------------------------------------------------------------------------
+//		 * 1. 비교하려는 필드가 참조형이면 그 클래스가 재정의해둔 hashCode()를 호출해서 비교
+//		 * 2. 비교하려는 필드가 기본형이면 기본형데이터를 참조형으로 변경하는 포장클래스 객체로
+//		 * 	  변환 후에 hashCode()를 적용
+//		 * 3. 비교하려는 필드가 1개 이상이면 1, 2를 각 필드의 타입에 맞추어 적용하고
+//		 *    모든 필드의 결과를 XOR(^) 연산을 통과시켜 그 결과를 리턴한다.
+//		 */
+//		
+//		// pcode만 비교
+//		//return this.pcode.hashCode();
+//		// 모든 필드 비교
+//		//return pcode.hashCode()^pname.hashCode()^new Integer(price).hashCode()^new Integer(quantity).hashCode();
+//	}
+	 
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((pcode == null) ? 0 : pcode.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (pcode == null) {
+			if (other.pcode != null)
+				return false;
+		} else if (!pcode.equals(other.pcode))
+			return false;
+		return true;
+	}
+
 	/**
 	 * 입력된 퍼센트만큼 할인된 가격을 리턴하는 메소드
 	 * 
@@ -141,6 +207,30 @@ public class Product {
 	public void buy(int amount) {
 		quantity += amount;
 	}
+	
+	/* -----------------------------------------------------------------------------------------------------------
+	 * 캡슐화를 적용하여 멤버변수 필드의 가시성이 private로 조정되면 다른 모든 클래스에서 접근이 불가능해진다.
+	 * 따라서 숨겨진 필드에 접근할 수 있는 전용 메소드 쌍을 정의해야 한다. ==> 접근자/수정자 메소드
+	 * ==========================================================================================================
+	 * 접근자 메소드 : getter
+	 * ----------------------------------------------------------------------------------------------------------
+	 * 1. get으로 시작
+	 * 2. get 뒤에 오는 이름은 접근하려는 멤버변수 이름의 첫 글자만 대문자로 하는 낙타표기법(camel_notation) 적용
+	 * 3. 메소드 매개변수는 없어야한다.
+	 * 4. 메소드 리턴타입은 접근하려는 멤버변수의 타입과 맞춘다.
+	 * 5. 멤버변수 타입이 boolean인 경우, get이 아니라 is로 시작하도록 작성
+	 * 6. getXxx(), isXxx() 형태로 정의
+	 * =========================================================================================================
+	 * 수정자 메소드 : setter
+	 * ---------------------------------------------------------------------------------------------------------
+	 * 1. set으로 시작
+	 * 2. set 뒤에 오는 이름은 수정하려는 멤버변수 이름의 첫 글자만 대문자로 하는 낙타표기법 적용
+	 * 3. 메소드 매개변수는 수정하려는 멤버변수 타입과 맞추고 보통 수정하려는 멤버변수 이름과 같게 설정
+	 * 4. 리턴타입은 void로 한다.
+	 * 5. 보통 안쪽의 로직은 this.멤버변수 = 매개변수; 로 작성
+	 * ----------------------------------------------------------------------------------------------------------
+	 * 
+	 */
 	
 	// 수정자 메소드 선언
 	public void setPcode(String pcode) {

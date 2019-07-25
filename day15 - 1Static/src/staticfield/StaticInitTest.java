@@ -32,7 +32,7 @@ public class StaticInitTest {
 		
 		// 4. StaticInit 클래스의 static print() 사용
 		StaticInit.print();
-		StaticInit.print(init);
+		StaticInit.print(init); 
 	}
 
 }
