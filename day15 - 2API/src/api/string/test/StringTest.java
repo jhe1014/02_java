@@ -29,10 +29,9 @@ public class StringTest {
 		String str4  = "안녕하세요.";
 		
 		System.out.println("=== 객체 비교 : 참조형의 경우는 화살표가 도달하는 곳 ===");
-		System.out.printf("str1 == str2 ? %b%n", str1 == str2);
+		System.out.printf("str1 == str2 ? %b%n", str1 == str2); 
 		System.out.printf("str1 == str3 ? %b%n", str1 == str3);
 		System.out.printf("str3 == str4 ? %b%n", str3 == str4);
-
 		
 		System.out.println("=== 객체 내용 비교 ===");
 		System.out.printf("str1.equals(str2) ? %b%n", str1.contentEquals(str2));
