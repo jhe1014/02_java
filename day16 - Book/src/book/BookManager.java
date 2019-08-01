@@ -80,7 +80,7 @@ public class BookManager {
 		String message;
 		response = new MessageResp();
 		
-		if (rmCnt > 0) {
+		if (rmCnt >  0) {
 			message = String.format(book.toString() + "%d 건이 삭제되었습니다.", rmCnt);
 		} else {
 			message = "삭제하려는 도서가 존재하지 않습니다.";
@@ -156,6 +156,6 @@ public class BookManager {
 	// (5) 매니저는 서점에서 판매되고 있는 책의 목록을 보여줄 수 있다. (조회할 수 있다.)
 	public void getAllBooks() {
 		response = new ListResp();
-		response.response(bookShelf.getAllBooks());
+		response.response(bookShelf.getAllBooks()); 
 	}
 }
