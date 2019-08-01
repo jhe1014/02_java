@@ -42,8 +42,8 @@ public class BookStore {
 	}
 	
 	// (4) 서점에 온 고객이 책을 찾을 때 매니저에게 찾아달라고 부탁함
-	public Book get(Book book) {
-		return manager.get(book);
+	public void get(Book book) {
+		manager.get(book);
 	}
 	
 	// (5) 우리 서점에서 판매하는 모든 책의 목록을 매니저에게 출력해달라고 부탁함.

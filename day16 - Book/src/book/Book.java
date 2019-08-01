@@ -117,7 +117,7 @@ public class Book {
 	 }
 	 
 	 public String toString() {
-		 return String.format("[isbn : %s] 제목 : %s, 저자 : %s, 출판사 : %s, 페이지 수 : %d, 가격 : %d, 재고수량 : %d", 
+		 return String.format("[isbn : %s] 제목 : %s, 저자 : %s, 출판사 : %s, 페이지 수 : %d, 가격 : %d, 재고수량 : %d | ", 
 				 				isbn, title, author, company, totalPage, price, quantity);
 	 }
 

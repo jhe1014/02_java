@@ -63,9 +63,8 @@ public class BookStoreTest {
 		// (1) 해당 책의 시퀀스 번호만 알면 조회 가능
 		//	   시퀀스 번호만 들어있는 Book 객체를 생성
 		System.out.println("====== 5. 채식주의자 책 정보 변경 확인======");
-		Book seqBook = new Book("9788936433598");
-		Book findBook = kyobo.get(seqBook);
-		findBook.print();
+		Book seqBook = new Book(1);
+		kyobo.get(seqBook);
 		
 		// 6. 책은 도끼다 폐기 : remove
 		// (1) 폐기할 책의 시퀀스 번호만 알면 폐기 가능

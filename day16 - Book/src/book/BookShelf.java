@@ -144,7 +144,7 @@ public class BookShelf {
 	private Book findBook(Book book) { // .equals
 		Book findBook = null;
 		for(int idx = 0; idx < books.length; idx++) {
-			if(books[idx].getIsbn().equals(book.getIsbn())) {
+			if(books[idx].equals(book)) {
 				// 같은 책 찾았다.
 				findBook = books[idx];
 				break;
