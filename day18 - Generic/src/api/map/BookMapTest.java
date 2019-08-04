@@ -1,5 +1,7 @@
 package api.map;
 
+import static java.lang.Integer.valueOf;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -46,6 +48,13 @@ public class BookMapTest {
 		books.put(noDaap.getSequence(), noDaap);
 		books.put(dduk.getSequence(), dduk);
 		books.put(ax.getSequence(), ax);
+		
+		// 직접 포장하는 방식도 가능
+		// books.put(new Integer(noDaap.getSequence()), noDaap);
+		
+		// Integer 객체로 포장하는 또 다른 방법
+		// static 메소드인 valueOf(int) 를 사용함, import static 사용
+		// books.put(valueOf(dduk.getSequence()), dduk);
 	
 		// 4. 데이터 출력
 		// (1) foreach 전체 데이터 출력
