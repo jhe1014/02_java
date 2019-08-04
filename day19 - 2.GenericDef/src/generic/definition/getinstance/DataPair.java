@@ -59,6 +59,14 @@ public class DataPair<K, V> {
 		this.value = value;
 	}
 	
+	public K getPairKey() {
+		return this.key;
+	}
+	
+	public V getPairValue(K key) {
+		return this.value;
+	}
+	
 	// (2) 이 클래스 타입의 인스턴스를 리턴하는 static 메소드 getInstance() 작성
 	// 앞쪽 꺽새가 사용되는 것, 뒤쪽 꺽새가 리턴타입
 	public static <K, V> DataPair<K, V> getInstance(K key, V value) {

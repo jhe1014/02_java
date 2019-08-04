@@ -23,9 +23,9 @@ public class DataPairTest {
 	    ibDataPair = getInstance(1, new Book(1));
 	    
 	    // 3. 사용
-	    System.out.printf("%d : %s%n", isDataPair.getKey(), isDataPair.getValue());
-	    System.out.printf("%s : %s%n", ssDataPair.getKey(), ssDataPair.getValue());
-	    System.out.printf("%d : %s%n", ibDataPair.getKey(), ibDataPair.getValue());
+	    System.out.printf("%d : %s%n", isDataPair.getPairKey(), isDataPair.getPairValue(isDataPair.getPairKey()));
+	    System.out.printf("%s : %s%n", ssDataPair.getPairKey(), ssDataPair.getPairValue(ssDataPair.getPairKey()));
+	    System.out.printf("%d : %s%n", ibDataPair.getPairKey(), ibDataPair.getPairValue(ibDataPair.getPairKey()));
 	}
 
 }
