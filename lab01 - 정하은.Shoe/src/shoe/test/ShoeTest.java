@@ -88,6 +88,7 @@ public class ShoeTest {
 		// 6. 수정된 내용 출력
 		System.out.println("====== 6. 수정된 내용 출력 ======");
 		System.out.println("====== (1) shoesList ======");
+		// 배열값 기준으로 판단...
 		System.out.println(shoesList.get(2));
 		
 		System.out.println("====== (2) shoesSet ======");
@@ -95,6 +96,7 @@ public class ShoeTest {
 		System.out.println(shoeSetlist2[2]);
 		
 		System.out.println("====== (3) shoesMap ======");
+		// code 값으로 판단..
 		System.out.println(shoesMap.get(3));
 		
 		// 7. 세번째 신발 정보 삭제

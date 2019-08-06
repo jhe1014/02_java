@@ -23,7 +23,7 @@ import java.io.ObjectOutputStream;
  *  @author Administrator
  *
  */
-public class WriteBookObejec {
+public class WriteBookObeject {
 
 	public static void main(String[] args) throws IOException {
 		//1. 입력용 Book 객체 선언, 초기화
