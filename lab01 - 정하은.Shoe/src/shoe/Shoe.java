@@ -138,7 +138,7 @@ public class Shoe {
 	}
 	
 	public String toString() {
-		return String.format("[%d] 제품명 : %s, 사이즈 : %d, 가격 : %d, 분류 : %s, 재고수량 : %d",
+		return String.format("[%d] 제품명 : %s, 사이즈 : %d, 가격 : %d, 분류 : %s, 재고수량 : %d%n",
 				code, name, size, price, type, quantity);
 	}
 	
